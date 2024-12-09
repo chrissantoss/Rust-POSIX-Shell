@@ -1,0 +1,146 @@
+$ /bin/ls/ -l /usr/share
+error: failed to execute command: Not a directory (os error 20)
+$ bin/ls -l /usr/share
+error: failed to execute command: No such file or directory (os error 2)
+$ /bin/ls -l /usr/share
+total 296
+drwxr-xr-x  2 root root  4096 Dec 19  2023 ImageMagick-6
+drwxr-xr-x  3 root root  4096 Dec 19  2023 X11
+drwxr-xr-x  2 root root  4096 Dec 19  2023 aclocal
+drwxr-xr-x  3 root root  4096 Dec 19  2023 aclocal-1.16
+drwxr-xr-x  2 root root  4096 Dec 18  2023 adduser
+drwxr-xr-x  1 root root  4096 Dec 19  2023 applications
+drwxr-xr-x  3 root root  4096 Dec 19  2023 apport
+drwxr-xr-x  7 root root  4096 Dec 19  2023 autoconf
+drwxr-xr-x  4 root root  4096 Dec 19  2023 automake-1.16
+drwxr-xr-x  2 root root  4096 Dec 18  2023 base-files
+drwxr-xr-x  2 root root  4096 Dec 18  2023 base-passwd
+drwxr-xr-x  1 root root  4096 Jun 10  2021 bash-completion
+drwxr-xr-x  2 root root  4096 Dec 19  2023 binfmts
+drwxr-xr-x  1 root root  4096 Dec 19  2023 bug
+drwxr-xr-x  3 root root  4096 Dec 19  2023 ca-certificates
+drwxr-xr-x  2 root root  4096 Dec 18  2023 common-licenses
+drwxr-xr-x  2 root root  4096 Dec 18  2023 debconf
+drwxr-xr-x  2 root root  4096 Dec 18  2023 debianutils
+drwxr-xr-x  2 root root  4096 Sep 29  2023 dict
+drwxr-xr-x  4 root root  4096 Dec 19  2023 djvu
+drwxr-xr-x  1 root root 12288 Dec 19  2023 doc
+drwxr-xr-x  1 root root  4096 Dec 19  2023 doc-base
+drwxr-xr-x  1 root root  4096 Dec 19  2023 dpkg
+drwxr-xr-x  1 root root  4096 Dec 19  2023 emacs
+drwxr-xr-x  2 root root  4096 Dec 19  2023 et
+drwxr-xr-x  3 root root  4096 Dec 19  2023 file
+drwxr-xr-x  3 root root  4096 Dec 19  2023 fontconfig
+drwxr-xr-x  3 root root  4096 Dec 19  2023 fonts
+drwxr-xr-x  3 root root  4096 Jan 10  2021 gcc
+drwxr-xr-x  1 root root  4096 Jan 10  2021 gdb
+drwxr-xr-x  3 root root  4096 Dec 19  2023 gettext
+drwxr-xr-x  2 root root  4096 Dec 19  2023 gir-1.0
+drwxr-xr-x  4 root root  4096 Dec 19  2023 git-core
+drwxr-xr-x  3 root root  4096 Dec 19  2023 gitweb
+drwxr-xr-x  7 root root  4096 Dec 19  2023 glib-2.0
+drwxr-xr-x  2 root root  4096 Dec 19  2023 gnupg
+drwxr-xr-x  3 root root  4096 Dec 19  2023 icons
+drwxr-xr-x  3 root root  4096 Dec 19  2023 icu
+drwxr-xr-x  1 root root  4096 Dec 19  2023 info
+drwxr-xr-x  2 root root  4096 Dec 18  2023 keyrings
+drwxr-xr-x  2 root root  4096 Dec 18  2023 libc-bin
+drwxr-xr-x  2 root root  4096 Dec 19  2023 libthai
+drwxr-xr-x  5 root root  4096 Dec 19  2023 libtool
+drwxr-xr-x  1 root root  4096 Dec 18  2023 lintian
+drwxr-xr-x  1 root root  4096 Dec 19  2023 locale
+drwxr-xr-x  1 root root  4096 Dec 19  2023 man
+drwxr-xr-x  1 root root  4096 Dec 19  2023 menu
+drwxr-xr-x  3 root root  4096 Dec 19  2023 mercurial
+drwxr-xr-x 15 root root  4096 Dec 19  2023 mime
+drwxr-xr-x  1 root root  4096 Dec 19  2023 misc
+drwxr-xr-x  2 root root  4096 Dec 19  2023 mysql-common
+drwxr-xr-x  2 root root  4096 Dec 18  2023 pam
+drwxr-xr-x  2 root root  4096 Dec 18  2023 pam-configs
+drwxr-xr-x  3 root root  4096 Dec 19  2023 perl
+drwxr-xr-x  1 root root  4096 Dec 19  2023 perl5
+drwxr-xr-x  1 root root  4096 Dec 19  2023 pixmaps
+-rwxr-xr-x  1 root root  2047 Apr 21  2020 pkg-config-crosswrapper
+-rwxr-xr-x  1 root root  1826 Apr 21  2020 pkg-config-dpkghook
+drwxr-xr-x  2 root root  4096 Dec 19  2023 pkgconfig
+drwxr-xr-x  3 root root  4096 Sep 13  2023 polkit-1
+drwxr-xr-x  1 root root  4096 Dec 19  2023 python3
+drwxr-xr-x  2 root root  4096 Dec 19  2023 readline
+drwxr-xr-x  3 root root  4096 Dec 19  2023 sensible-utils
+drwxr-xr-x  3 root root  4096 Dec 19  2023 sgml
+drwxr-xr-x  2 root root  4096 Dec 18  2023 tabset
+drwxr-xr-x  2 root root  4096 May 26  2023 terminfo
+drwxr-xr-x  2 root root  4096 Dec 19  2023 thumbnailers
+drwxr-xr-x  2 root root  4096 Dec 19  2023 ucf
+drwxr-xr-x  3 root root  4096 Dec 19  2023 vala
+drwxr-xr-x  3 root root  4096 Dec 19  2023 xml
+drwxr-xr-x 20 root root  4096 Dec 18  2023 zoneinfo
+drwxr-xr-x  1 root root  4096 Dec 19  2023 zsh
+$ cat /proc/mounts
+overlay / overlay rw,relatime,lowerdir=/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/137/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/136/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/135/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/58/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/43/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/42/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/41/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/40/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/39/fs,upperdir=/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/138/fs,workdir=/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/138/work 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /dev tmpfs rw,nosuid,size=65536k,mode=755 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=666 0 0
+sysfs /sys sysfs ro,nosuid,nodev,noexec,relatime 0 0
+cgroup /sys/fs/cgroup cgroup2 ro,nosuid,nodev,noexec,relatime 0 0
+mqueue /dev/mqueue mqueue rw,nosuid,nodev,noexec,relatime 0 0
+shm /dev/shm tmpfs rw,nosuid,nodev,noexec,relatime,size=65536k 0 0
+/dev/vda1 /etc/resolv.conf ext4 rw,relatime,discard 0 0
+/dev/vda1 /etc/hostname ext4 rw,relatime,discard 0 0
+/dev/vda1 /etc/hosts ext4 rw,relatime,discard 0 0
+devpts /dev/console devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=666 0 0
+proc /proc/bus proc ro,nosuid,nodev,noexec,relatime 0 0
+proc /proc/fs proc ro,nosuid,nodev,noexec,relatime 0 0
+proc /proc/irq proc ro,nosuid,nodev,noexec,relatime 0 0
+proc /proc/sys proc ro,nosuid,nodev,noexec,relatime 0 0
+proc /proc/sysrq-trigger proc ro,nosuid,nodev,noexec,relatime 0 0
+tmpfs /proc/kcore tmpfs rw,nosuid,size=65536k,mode=755 0 0
+tmpfs /proc/keys tmpfs rw,nosuid,size=65536k,mode=755 0 0
+tmpfs /proc/timer_list tmpfs rw,nosuid,size=65536k,mode=755 0 0
+tmpfs /proc/scsi tmpfs ro,relatime 0 0
+tmpfs /sys/firmware tmpfs ro,relatime 0 0
+$ /usr/bin/printf "The cat's name is %s.\n" 'Rusty'
+The cat's name is Rusty.
+$ /usr/bin/printf "Missing quotes
+error: mismatched quotes
+$ cd /sys 
+$ ls
+block  bus  class  dev  devices  firmware  fs  kernel  module
+$ cd /nonexistent
+error: cd failed: No such file or directory (os error 2)
+$ head /nonexistent
+/usr/bin/head: cannot open '/nonexistent' for reading: No such file or directory
+error: command exited with code 1
+$ cd /sys
+$ ls
+block  bus  class  dev  devices  firmware  fs  kernel  module
+$ 
+$ 
+$ /bin/ls -l
+total 0
+drwxr-xr-x   2 root root  0 Dec  9 19:31 block
+drwxr-xr-x  28 root root  0 Dec  9 19:31 bus
+drwxr-xr-x  40 root root  0 Dec  9 19:31 class
+drwxr-xr-x   4 root root  0 Dec  9 19:31 dev
+drwxr-xr-x  10 root root  0 Dec  9 19:26 devices
+drwxrwxrwt   2 root root 40 Dec  9 19:26 firmware
+drwxr-xr-x  14 root root  0 Dec  9 19:26 fs
+drwxr-xr-x  14 root root  0 Dec  9 19:31 kernel
+drwxr-xr-x 113 root root  0 Dec  9 19:31 module
+$ /bin/echo extra      spaces    will    be     removed
+extra spaces will be removed
+$ echo "but    not     if    they're    in    quotes"
+but    not     if    they're    in    quotes
+$ cd '/proc/sys'
+$ pwd
+/proc/sys
+$ mkdir '/tmp/"hello"'
+$ cd '/tmp/"hello"'
+$ pwd
+/tmp/"hello"
+$ cd ..
+$ false
+error: command exited with code 1
+$ /bin/sh -c 'exit 7'
+error: command exited with code 7
+$ exit
