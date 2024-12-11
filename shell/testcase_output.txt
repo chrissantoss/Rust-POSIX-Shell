@@ -1,7 +1,41 @@
-$ /bin/ls/ -l /usr/share
-error: failed to execute command: Not a directory (os error 20)
-$ bin/ls -l /usr/share
-error: failed to execute command: No such file or directory (os error 2)
+$ cd /sys
+$ ls
+block  bus  class  dev  devices  firmware  fs  kernel  module
+$ 
+$ 
+$ /bin/ls -l 
+total 0
+drwxr-xr-x   2 root root  0 Dec  9 21:15 block
+drwxr-xr-x  28 root root  0 Dec  9 21:15 bus
+drwxr-xr-x  40 root root  0 Dec  9 21:15 class
+drwxr-xr-x   4 root root  0 Dec  9 21:15 dev
+drwxr-xr-x  10 root root  0 Dec  9 21:14 devices
+drwxrwxrwt   2 root root 40 Dec  9 21:14 firmware
+drwxr-xr-x  14 root root  0 Dec  9 21:14 fs
+drwxr-xr-x  14 root root  0 Dec  9 21:15 kernel
+drwxr-xr-x 113 root root  0 Dec  9 21:15 module
+$ /bin/echo extra       spaces  will    be      removed
+extra spaces will be removed
+$ /bin/echo extra       spaces  will    be                      removed
+extra spaces will be removed
+$ /bin/echo             extra   spaces will be  removed                    
+extra spaces will be removed
+$ echo "but     not     if      they're         in      quotes"
+but     not     if      they're         in      quotes
+$ cd            '/proc/sys'
+$ pwd
+/proc/sys
+$ mkdir '/tmp/"hello"'
+$ cd '/tmp/"hello"'
+$ pwd
+/tmp/"hello"
+$ cd ..
+$ pwd
+/tmp
+$ false
+error: command exited with code 1
+$ /bin/sh -c 'exit 7'
+error: command exited with code 7
 $ /bin/ls -l /usr/share
 total 296
 drwxr-xr-x  2 root root  4096 Dec 19  2023 ImageMagick-6
@@ -77,7 +111,7 @@ drwxr-xr-x  3 root root  4096 Dec 19  2023 xml
 drwxr-xr-x 20 root root  4096 Dec 18  2023 zoneinfo
 drwxr-xr-x  1 root root  4096 Dec 19  2023 zsh
 $ cat /proc/mounts
-overlay / overlay rw,relatime,lowerdir=/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/137/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/136/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/135/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/58/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/43/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/42/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/41/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/40/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/39/fs,upperdir=/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/138/fs,workdir=/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/138/work 0 0
+overlay / overlay rw,relatime,lowerdir=/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/300/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/299/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/298/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/58/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/43/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/42/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/41/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/40/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/39/fs,upperdir=/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/301/fs,workdir=/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/301/work 0 0
 proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
 tmpfs /dev tmpfs rw,nosuid,size=65536k,mode=755 0 0
 devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=666 0 0
@@ -101,15 +135,15 @@ tmpfs /proc/scsi tmpfs ro,relatime 0 0
 tmpfs /sys/firmware tmpfs ro,relatime 0 0
 $ /usr/bin/printf "The cat's name is %s.\n" 'Rusty'
 The cat's name is Rusty.
-$ /usr/bin/printf "Missing quotes
+$ /usr/bin/printf "Missing quote 
 error: mismatched quotes
-$ cd /sys 
+$ cd /sys
 $ ls
 block  bus  class  dev  devices  firmware  fs  kernel  module
 $ cd /nonexistent
 error: cd failed: No such file or directory (os error 2)
 $ head /nonexistent
-/usr/bin/head: cannot open '/nonexistent' for reading: No such file or directory
+head: cannot open '/nonexistent' for reading: No such file or directory
 error: command exited with code 1
 $ cd /sys
 $ ls
@@ -118,27 +152,34 @@ $
 $ 
 $ /bin/ls -l
 total 0
-drwxr-xr-x   2 root root  0 Dec  9 19:31 block
-drwxr-xr-x  28 root root  0 Dec  9 19:31 bus
-drwxr-xr-x  40 root root  0 Dec  9 19:31 class
-drwxr-xr-x   4 root root  0 Dec  9 19:31 dev
-drwxr-xr-x  10 root root  0 Dec  9 19:26 devices
-drwxrwxrwt   2 root root 40 Dec  9 19:26 firmware
-drwxr-xr-x  14 root root  0 Dec  9 19:26 fs
-drwxr-xr-x  14 root root  0 Dec  9 19:31 kernel
-drwxr-xr-x 113 root root  0 Dec  9 19:31 module
-$ /bin/echo extra      spaces    will    be     removed
+drwxr-xr-x   2 root root  0 Dec  9 21:15 block
+drwxr-xr-x  28 root root  0 Dec  9 21:15 bus
+drwxr-xr-x  40 root root  0 Dec  9 21:15 class
+drwxr-xr-x   4 root root  0 Dec  9 21:15 dev
+drwxr-xr-x  10 root root  0 Dec  9 21:14 devices
+drwxrwxrwt   2 root root 40 Dec  9 21:14 firmware
+drwxr-xr-x  14 root root  0 Dec  9 21:14 fs
+drwxr-xr-x  14 root root  0 Dec  9 21:15 kernel
+drwxr-xr-x 113 root root  0 Dec  9 21:15 module
+$ /bin/echo extra       spaces  will    be      removed
 extra spaces will be removed
-$ echo "but    not     if    they're    in    quotes"
-but    not     if    they're    in    quotes
-$ cd '/proc/sys'
+$ /bin/echo extra       spaces  will    be                      removed
+extra spaces will be removed
+$ /bin/echo             extra   spaces will be  removed                    
+extra spaces will be removed
+$ cd            '/proc/sys'
+$       cd '/proc/sys'         
 $ pwd
 /proc/sys
 $ mkdir '/tmp/"hello"'
+mkdir: cannot create directory '/tmp/"hello"': File exists
+error: command exited with code 1
 $ cd '/tmp/"hello"'
 $ pwd
 /tmp/"hello"
 $ cd ..
+$ pwd
+/tmp
 $ false
 error: command exited with code 1
 $ /bin/sh -c 'exit 7'
